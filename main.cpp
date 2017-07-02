@@ -6,7 +6,10 @@ int main() {
 
 	for (size_t index = 0; index < integers.size(); ++index)
 	{
-		std::cout << "Element [" << index << "] = " << integers[index] << std::endl;
+		//std::cout << "Element [" << index << "] = " << integers[index] << std::endl;
+
+		// safer way to get same outcome as above - .at checks against sieze of the container
+		std::cout << "AT Element [" << index << "] =" << integers.at(index) << std::endl;
 	}
 
 	integers[2] = 2011;					// change value of 3rd element
